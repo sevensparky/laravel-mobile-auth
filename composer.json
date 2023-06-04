@@ -1,0 +1,56 @@
+{
+    "name": "sevensparky/laravel-mobile-auth",
+    "description": "simple mobile authentication to Laravel framework",
+    "minimum-stability": "stable",
+    "license": "GPL-3.0-or-later",
+    "keywords": [
+        "php",
+        "laravel",
+        "mobile auth",
+        "sevensparky"
+    ],
+    "authors": [
+        {
+            "name": "sajjad",
+            "email": "samkaveh9@gmail.com",
+            "homepage": "http://github.com/sevensparky",
+            "role": "developer"
+        }
+    ],
+    "require": {
+        "php": ">=7.4",
+        "illuminate/support": ">=6",
+        "doctrine/dbal": "^3.6"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^8"
+    },
+    "autoload": {
+        "psr-4": {
+            "SevenSparky\\LaravelMobileAuth\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "SevenSparky\\LaravelMobileAuth\\Tests\\": "tests"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-covarage": "vendor/bin/phpunit --coverage-html coverage"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "SevenSparky\\LaravelMobileAuth\\ServiceProvider\\LaravelMobileAuthServiceProvider",
+                "SevenSparky\\LaravelMobileAuth\\ServiceProvider\\LaravelMobileAuthRouteServiceProvider"
+            ],
+            "aliases": {
+                "LaravelMobileAuth": "SevenSparky\\LaravelMobileAuth\\Facade\\LaravelMobileAuthFacade"
+            }
+        }
+    }
+}
